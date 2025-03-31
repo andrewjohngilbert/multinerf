@@ -74,7 +74,9 @@
                   </div>
 
                   <div class="is-size-5 publication-authors">
-                    <span class="author-block"> University of Surrey<sup>[1]</sup>, Adobe Research<sup>[2]</sup><br> <a href="https://iclr.cc/" target="_blank">The Thirteenth International Conference on Learning Representations ICLR'25</a> <a href="https://sites.google.com/view/genai-watermark/" target="_blank">	1st Workshop on GenAI Watermarking</a>              
+                    <span class="author-block"> University of Surrey<sup>[1]</sup>, Adobe Research<sup>[2]</sup><br> 
+                      <a href="https://iclr.cc/" target="_blank">The Thirteenth International Conference on Learning Representations ICLR'25</a> <br> 
+                    <a href="https://sites.google.com/view/genai-watermark/" target="_blank">	1st Workshop on GenAI Watermarking</a>              
                   </div>
 
                   <div class="column has-text-centered">
@@ -163,12 +165,38 @@
     <div class="hero-body">
       <img src="assets/MultiNerf-fullmethod.png">
       <h2 class="subtitle has-text-centered">
-        MultiNeRF training process   A learnable encoder transforms multiple distinct watermark IDs into compact embedding vectors. TensoRF is trained with a HiDDEN decoder module end-to-end with rendered images passing through differentiable noise augmentations. Perceptual and patch-based reconstruction losses balance visual quality against a message loss).
+        MultiNeRF training process   A learnable encoder transforms multiple distinct watermark IDs into compact embedding vectors. TensoRF is trained with a HiDDEN decoder module end-to-end with rendered images passing through differentiable noise augmentations. Perceptual and patch-based reconstruction losses balance visual quality against a message loss.
       </h2>
     </div>
   </div>
 </section>
 <!-- End fullmethod figure-->
+
+<!-- table results -->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <img src="assets/MultiNerf-tableSingleWM.jpg">
+      <h2 class="subtitle has-text-centered">
+        This table shows that MultiNeRF achieves a mean bit accuracy of 93.18\% on SYN outperforming both WateRF (91.51%) and NeRFProtector (90.81%); and like WaterRF saturates performance on LLLF at ~ 99\%.  Whilst the noised variant (MultiNeRF-Noised) exhibits slightly lower bit accuracies in some scenes, this is traded for improved robustness. MultiNeRF generally achieves comparable quality and slightly higher accuracy at the single watermarking task.
+      </h2>
+    </div>
+  </div>
+</section>
+<!-- End table results Sngle WM figure-->
+
+<!-- Figure MultiNerf-bitAcc results -->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <img src="assets/MultiNerf-bitAcc.jpg">
+      <h2 class="subtitle has-text-centered">
+        This Figure presents the average bit accuracy across the SYN and LLFF datasets for varying numbers of unique watermarks per model.  For SYN, WateRF-modified returns a random response (50% bit accuracy) for 32 watermarks and onwards versus MultiNeRF at 70%  bit accuracy on 32 watermarks, which degrades to a random response at 64 watermarks. Similarly, for LLFF, we observe that both methods start with similar bit accuracies at  2 watermarks, with WateRF-modified dropping to random response at 32 watermarks, whilst MultiNeRF achieves 82% bit accuracy at 32 watermarks and 68%  at 64 watermarks.  The error bars confirm a significant bit accuracy improvement using MultiNeRF for the multiple watermarking task.
+      </h2>
+    </div>
+  </div>
+</section>
+<!-- End Figure MultiNerf-bitAcc-->
 
 
 <!-- Paper poster -->
